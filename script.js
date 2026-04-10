@@ -1,33 +1,31 @@
 //complete this code
 class Rectangle {
-	Rectangle(width,height)
-	{
-    this.width=width;
-	this.height=height;
-	}
-	get width()
-	{
-    console.log(this.width);
-	}
-	get height()
-	{
-    console.log(this.height);
-	}
-	function getArea()
-	{
-    return this.width*this.height;
-	}
-	}
+  constructor(width, height) {
+    this._width = width;
+    this._height = height;
+  }
+
+  get width() {
+    return this._width;
+  }
+
+  get height() {
+    return this._height;
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
 class Square extends Rectangle {
-	Square(side)
-	{
-    this.width=side;
-	this.height=side;
-	}
-	get Perimeter()
-	{
-     return side*4;
-	}
+  constructor(side) {
+    super(side, side);
+  }
+
+  getPerimeter() {
+    return 4 * this.width;
+  }
 }
 
 // Do not change the code below this line
